@@ -293,7 +293,7 @@ void handle_connection(int socket){
 					if(session.getSocket(currentUser) != socket){
 						indexOfUser = session.getUserIndex(currentUser);
 						if(indexOfUser == -1) break;
-						for(int i = 0; i < session.activeUsers[indexOfUser].locations.size(); i++){
+						for(int i = 0; i < (int)session.activeUsers[indexOfUser].locations.size(); i++){
 							if(session.activeUsers[indexOfUser].locations[i] == location){
 								send(session.getSocket(currentUser), message.c_str(), message.length(), 0);
 								session.addMessage(session.getUserIndex(currentUser), message);
