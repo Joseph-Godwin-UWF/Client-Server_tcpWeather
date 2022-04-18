@@ -19,4 +19,5 @@ tcpClient.o: tcpClient.cpp tcpClient.hpp
 ClientMenus.o: ClientMenus.hpp ClientMenus.cpp
 	g++ -c ClientMenus.cpp
 
-clean: rm *.o server client
+clean:
+	 rm *.o server client
